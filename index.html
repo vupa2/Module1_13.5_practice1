@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="bai1">Bai 1:&nbsp;</h1>
+  <h1 id="bai2">Bai 2:&nbsp;</h1>
+  
+  <script>
+    // Bai 1
+    const array1 = [];
+    let count1 = 0;
+    for (let i = 0; i < 10; i++) {
+      const randNum = Math.floor(Math.random() * (20 + 1))
+      array1.push(randNum);
+    }
+    
+    array1.forEach(number => {
+      if (number >= 10) count1++;
+    })
+    
+    document.querySelector('#bai1').innerText += count1 + ' so lon hon hoac bang 10';
+    
+    // Bai 2
+    const array2 = [];
+    let count2 = 0;
+    
+    while (count2 < 10) {
+      const randNum = Math.floor(Math.random() * (20 + 1));
+  
+      if (array2.indexOf(randNum) === -1) {
+        array2.push(randNum);
+        count2++;
+      }
+    }
+    
+    document.querySelector('#bai2').innerText += Math.max.apply(Math, array2);
+    
+    // Bai 3
+    const array3 = [];
+    let count3 = 0;
+
+    while (count2 < 10) {
+      const randNum = Math.floor(Math.random() * (-20 + 1));
+  
+      if (array3.indexOf(randNum) === -1) {
+        array3.push(randNum);
+        count2++;
+      }
+    }
+
+    document.querySelector('#bai2').innerText += Math.max.apply(Math, array3);
+  </script>
+</body>
+</html>
